@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+$linkcolor:#2493e9;//hover后的color
+// $figureNormalSize: 14px 296px 383px !default; //左边距/宽度/高度
+$color:#666666;
+$border:1px solid #eeeeee !default;
+$totalwidth:1000px !default;
+$backcolor:#2493e9 #fff;
+$font-size:14px;
+//定义背景和颜色搭配
+@mixin backcolor($background:nth($backcolor,1),$color:nth($backcolor,2)){
+  background:$background;
+  color:$color;
+}
+//模块居中
+@mixin totalcenter{
+  width:$totalwidth;
+  margin:0 auto;
+}
+//计算循环体figure的大小和间距
+@mixin figure-size($number:5,$height:300px,$margin-left:14px){
+  width:($totalwidth - $margin-left * ($number - 1)) / $number;
+  height:$height;
+  margin-left:$margin-left;
+}
+//定义text-overflow
+@mixin text-overflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+//定义position:absolute块
+@mixin absolute($top:0,$left:0,$z-index:1){
+  position:absolute;
+  top:$top;
+  left:$left;
+  z-index:$z-index;
+}
+
+//定义过渡块
+@mixin transition($transition:0.2s,$all:all) {
+  transition: $all $transition ease 0s;
+}
+//定义兼容性行内元素
+@mixin inline-block{
+   display:inline-block;
+  *display:inline;
+  *zoom:1;
+  font-size:$font-size;
+}
+//定义line-height块
+@mixin line-height($height:20px){
+  height:$height;
+  line-height:$height;
+}
+
+
+

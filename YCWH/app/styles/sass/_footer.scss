@@ -1,0 +1,96 @@
+.wrap-footer{
+  background:#fff;
+  border-top:1px solid #f5f5f5;
+  min-width:$totalwidth;
+  @at-root #advantage{
+    @include totalcenter;
+    .inner-advantage{
+      font-size:0;
+      white-space: nowrap;
+      overflow: hidden;
+      *position: relative;
+      padding-top:12px;
+    }
+    figure{
+      position: relative;
+      @include inline-block;
+      width:$totalwidth / 4 - 146px;
+      height:56px;
+      padding:15px 0;
+      padding-left:147px;
+      font-size:16px;
+      @at-root .advantage-item-pic{
+        @include absolute(11px,70px);
+      }
+      @at-root .advantage-item-title,.advantage-item-text{
+        color:#616161;
+        border-right:$border;
+      }
+    }
+    // figure+figure+figure+figure .advantage-item-title,figure+figure+figure+figure .advantage-item-text{
+    //   border-right:none;
+    // }
+  }
+}
+#help{
+    border-top:$border;
+  }
+#footer{
+  border-top:1px solid #ddd;
+  @at-root .inner-footer{
+    @include totalcenter;
+    padding:30px 0;
+    @include font(12px,#757575);
+    position: relative;
+    overflow: hidden;
+    small{
+      font-size:100%;
+    }
+    .footer-info{
+      @include inline-block;
+      vertical-align: top;
+      padding-left: 10px;
+    }
+    @at-root .footer-list{
+      @include inline-block;
+      overflow: hidden;
+      position: absolute;
+      right:0;
+      top:auto;
+      
+      a{
+        float:right;
+        margin-left:20px;
+      }
+    }
+    @at-root .footer-logo{
+      @include inline-block;
+      vertical-align: top;
+      img{
+        width:36px;
+        height:36px;
+      }
+    }
+    .footer-support{
+      @include inline-block;
+      position: absolute;
+      top:50px;
+      left:50px;
+    }
+  }
+}
+.goTop{
+  display: block;
+  text-align:none;
+  width:40px;
+  height:40px;
+  position: fixed;
+  top:70%;
+  right:10px;
+  z-index:200;
+  background: rgb(150,150,150) url(../images/top.png) no-repeat center;
+ font-size:0;
+  &:hover{
+    background: rgb(122,122,122) url(../images/top.png) no-repeat center;
+  }
+}

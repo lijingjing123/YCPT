@@ -1,0 +1,37 @@
+#header{
+  @include totalcenter;
+  overflow: hidden;
+  padding:22px 0;
+  @at-root h1{
+    float:left;
+    img{
+      height:58px;
+    }
+  }
+  h2{
+    float:left;
+    padding-left: 10px;
+    padding-top:25px;
+    font-family:'STXingkai';
+  }
+  @at-root .header-cart{
+    float: right;
+    width: 116px;
+    text-align:center;
+    @include line-height(40px);
+     a{
+       display: block;
+       color:#fff;
+       margin-top:10px;
+       @include transition;
+       font-size:14px;
+       padding-left:20px;
+       background:$linkcolor url("../images/shop.png") no-repeat scroll 10px center;
+    }
+    
+    a:hover{
+      background:darken($linkcolor,10%) url("../images/shop.png") no-repeat scroll 10px center;
+    }
+  }
+
+}
